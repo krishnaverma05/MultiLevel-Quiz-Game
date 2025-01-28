@@ -1,0 +1,45 @@
+/* StartScreen.css */
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .start-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .start-screen button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .start-screen button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  .start-screen button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
