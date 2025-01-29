@@ -6,11 +6,6 @@ const Question = ({ question, onSubmit, feedback }) => {
 
   const handleAnswerChange = (value) => {
     setIsSubmitted(false);
-    // if (!isSubmitted) {
-    //   console.log(value);
-    //   setAnswer(value.toString());
-    //   setIsSubmitted(false);
-    // }
     setAnswer(value.toString());
   };
 
