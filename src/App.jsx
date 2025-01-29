@@ -11,20 +11,20 @@ const App = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [feedback, setFeedback] = useState(null); // Feedback for correct/incorrect
-  const [timer, setTimer] = useState(15); // Timer in seconds
+  const [feedback, setFeedback] = useState(null); 
+  const [timer, setTimer] = useState(15); 
 
-  // Reset the timer when the question changes
+
   useEffect(() => {
     if (gameState === "quiz") {
       setTimer(15);
     }
   }, [currentQuestionIndex, gameState]);
 
-  // Countdown timer logic
+
   useEffect(() => {
     if (timer <= 0 && gameState === "quiz") {
-      handleSubmit(null); // Automatically submit as incorrect if time runs out
+      handleSubmit(null); 
     }
 
     const interval = setInterval(() => {
@@ -33,7 +33,7 @@ const App = () => {
       }
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup interval
+    return () => clearInterval(interval); 
   }, [timer, gameState]);
 
   const handleStart = () => {
@@ -53,15 +53,15 @@ const App = () => {
 
     setFeedback(isCorrect ? "Correct!" : "Incorrect!");
 
-    // Delay for showing feedback before moving to the next question
+
     setTimeout(() => {
       setFeedback(null);
 
-      // Move to the next question or level
+
       if (currentQuestionIndex + 1 < questions.length) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       } else {
-        // Level progression
+ 
         if (correctAnswers + (isCorrect ? 1 : 0) >= 2) {
           if (level === "easy") {
             setLevel("medium");
